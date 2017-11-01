@@ -50,7 +50,9 @@ node {
       }
     }
     finally {
-      junit 'test_results/*.xml'
+      if (findFiles(glob: 'test_results/*.xml')) {
+        junit 'test_results/*.xml'
+      }
     }
   }
 }
