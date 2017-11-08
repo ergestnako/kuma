@@ -6,6 +6,10 @@ This is complicated by the fact that we don't know the configuration of the HTML
       <pre><em><code> (just to name a few)
 ********************************************************************** */
 
+pre[class*=brush] {
+    @extend %code-block;
+}
+
 /* prism.css incorrectly double styles code > code, but only with a backround color */
 code[class*='language-'] > code[class*='language-'] {
     background-color: none;

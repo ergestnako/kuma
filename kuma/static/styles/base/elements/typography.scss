@@ -98,7 +98,7 @@ sup {
 mono space elements (pre, code, kbd)
 ====================================================================== */
 
-code {
+:not(pre) > code {
     /*
       #dcdcdc at 50% on white is roughly $code-block-background-color
       can't blend fallback on white though because text is white in .highlight
@@ -134,7 +134,7 @@ code {
 /* pre is a block element so it gets a bit more fancy styling */
 pre {
     @include set-font-size($body-font-size);
-    line-height: 19px;
+    line-height: 1.5;
     border: 0;
     background: $light-background-color;
     color: $text-color;
