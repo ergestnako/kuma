@@ -119,14 +119,15 @@ We cannot put these styles in the base/elements/ files because they don't apply 
         @extend %highlight;
     }
 
-    h3,
-    h3 .highlight-span {
+    /* indent if we think this is a top level h3 */
+    article[id=wikiArticle] > h3,
+    article[id=wikiArticle] > div:not([class]) > h3.highlight-span {
         @include bidi-value(padding, 0 4px 0 $grid-spacing, 0 $grid-spacing 0 4px);
     }
 
     @media #{$mq-tablet-and-up} {
-        h3,
-        h3 .highlight-span {
+        article[id=wikiArticle] > h3,
+        article[id=wikiArticle] > div:not([class]) > h3.highlight-span {
             @include bidi-value(padding, 0 4px 0 $grid-spacing * 2, 0 $grid-spacing * 2 0 4px);
         }
     }
